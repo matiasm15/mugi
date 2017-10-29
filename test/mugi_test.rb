@@ -10,7 +10,7 @@ Minitest::Reporters.use!(Minitest::Reporters::SpecReporter.new)
 require_relative '../src/mugi'
 
 class TestMUGI < Minitest::Test
-  # Ver A_New_Keystream_Generator_MUGI.pdf
+  # Ver 'A New Keystream Generator MUGI'
   def test_example_00
     key = Word([
       0x00,
@@ -62,7 +62,7 @@ class TestMUGI < Minitest::Test
     ]
   end
 
-  # Ver 10_02espec.pdf
+  # Ver 'Specification Ver. 1.2'
   def test_example_01
     key = 0
     iv = 0

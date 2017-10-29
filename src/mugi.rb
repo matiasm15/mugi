@@ -3,19 +3,19 @@
 require_relative 'word'
 require_relative 'numeric'
 
-# Generación de números aleatorios de 64 bits con el algortimo MUGI dado una clave y un
+# Generador de números aleatorios de 64 bits con el algortimo MUGI dado una clave y un
 # vector de inicialización, ambos de 128 bits.
 class MUGI
   # Tamaño de la unidad en la que trabaja el algoritmo.
   UNIT_SIZE = 64
 
-  # Valor de la raiz cuadrada de 2 multiplicado por 2 a la 64.
+  # Raíz cuadrada de 2 multiplicado por 2 a la 64.
   C0 = Word(0x6A09E667F3BCC908, UNIT_SIZE * 2)
 
-  # Valor de la raiz cuadrada de 3 multiplicado por 2 a la 64.
+  # Raíz cuadrada de 3 multiplicado por 2 a la 64.
   C1 = Word(0xBB67AE8584CAA73B, UNIT_SIZE * 2)
 
-  # Valor de la raiz cuadrada de 5 multiplicado por 2 a la 64.
+  # Raíz cuadrada de 5 multiplicado por 2 a la 64.
   C2 = Word(0x3C6EF372FE94F82B, UNIT_SIZE * 2)
 
   # Inicializa el algoritmo.

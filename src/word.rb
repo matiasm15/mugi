@@ -8,8 +8,7 @@ class Word
   BASE = 2
 
   # Genera una palabra.
-  # @param param [Numeric, Word, Array<Numeric, Word>] objecto que se convertira en una
-  # palabra.
+  # @param param [Numeric, Word, Array<Numeric, Word>] objecto que se convertira en una palabra.
   # @param size [Numeric] tamaño del Word.
   # @raise [ArgumentError] si la clase de <em>param</em> es inválida.
   def initialize(param, size = nil)
@@ -127,11 +126,10 @@ class Word
   end
 
   # Transforma la palabra en una palabra de otro tamaño.
-  # @param size [Numeric] tamaño de la nueva palabra. Por defecto es el tamaño de la
-  # palabra actual.
+  # @param size [Numeric] tamaño de la nueva palabra.
   # @return [Word] nueva palabra.
-  def to_word(size = nil)
-    Word(@n, size || @size)
+  def to_word(size = @size)
+    Word(@n, size)
   end
 
   # Compara la palabra con otra palabra.

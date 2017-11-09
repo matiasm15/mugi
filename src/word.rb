@@ -8,27 +8,25 @@ class Word
   BASE = 2
 
   # Genera una palabra.
-  # @param param [Numeric, Word, Array<Numeric, Word>] objecto que se convertira en una palabra.
-  # @param size [Numeric] tamaño del Word.
+  # @param param [Integer, Word, Array<Integer, Word>] objecto que se convertira en una palabra.
+  # @param size [Integer] tamaño del Word.
   # @raise [ArgumentError] si la clase de <em>param</em> es inválida.
   def initialize(param, size = nil)
     case param
-    when Numeric
-      @size = size || (param.zero? ? 8 : [Math.log2(param).ceil, 8].max)
-      @n = param
-    when Word
-      @size = size || param.size
+    when Integer
+      @size = size || 8
       @n = param
     when Array
       @size = size || param.sum(&:size)
       @n = param.reverse.inject do |acu, i|
-        Word(i) + acu
-      end
-    else
-      raise ArgumentError, 'Argument must be Numeric, Word or Array'
+        i.to_word + acu
+      end.to_i
+    when Word
+      @size = size || param.size
+      @n = param.to_i
     end
 
-    @n = @n.to_i % BASE**@size
+    @n %= BASE**@size
   end
 
   # Devuelve el tamaño de la palabra.
@@ -41,56 +39,56 @@ class Word
   # @param word [Word] palabra que se va a concatenar a la derecha.
   # @return [Word] palabras concatenadas.
   def +(word)
-    Word((@n << word.size) + word.to_i, @size + word.size)
+    Word.new((@n << word.size) + word.to_i, @size + word.size)
   end
 
   # Devuelve un *xor* de dos palabras.
   # @param value [Word] palabra con la que se va a realizar el *xor*.
   # @return [Word] resultado de *xor*.
   def ^(value)
-    Word(@n ^ value.to_i, @size)
+    Word.new(@n ^ value.to_i, @size)
   end
 
   # Devuelve un *or* de dos palabras.
   # @param word [Word] palabra con la que se va a realizar el *or*.
   # @return [Word] resultado de *or*.
   def |(word)
-    Word(@n | word.to_i, [@size, word.size].max)
+    Word.new(@n | word.to_i, @size)
   end
 
   # Devuelve un *and* de dos palabras.
   # @param word [Word] palabra con la que se va a realizar el *and*.
   # @return [Word] resultado de *and*.
   def &(word)
-    Word(@n & word.to_i, [@size, word.size].max)
+    Word.new(@n & word.to_i, @size)
   end
 
   # Desplaza bits hacia la izquierda.
   # @param value [Numeric] cantidad de bits a desplazar.
   # @return [Word] resultado del desplazamiento.
   def <<(value)
-    Word(@n << value.to_i, @size)
+    Word.new(@n << value.to_i, @size)
   end
 
   # Desplaza bits hacia la derecha.
   # @param value [Numeric] cantidad de bits a desplazar.
   # @return [Word] resultado de haber rotado la palabra.
   def >>(value)
-    Word(@n >> value.to_i, @size)
+    Word.new(@n >> value.to_i, @size)
   end
 
   # Rota bits hacia la derecha.
   # @param value [Numeric] cantidad de bits a rotar.
-  # @return [Word] resultado del desplazamiento.
+  # @return [Word] resultado de haber rotado la palabra.
   def ⋙(value)
-    self >> value | self << ((@size - value) % @size)
+    self >> value | self << (@size - value)
   end
 
   # Rota bits hacia la izquierda.
   # @param value [Numeric] cantidad de bits a rotar.
   # @return [Word] resultado de haber rotado la palabra.
   def ⋘(value)
-    self << value | self >> ((@size - value) % @size)
+    self << value | self >> (@size - value)
   end
 
   # Devuelve una partición de la palabra.
@@ -101,9 +99,7 @@ class Word
     last_index = value - 1
 
     (0..last_index).map do |i|
-      new_value = @n >> (new_size * (last_index - i))
-
-      Word(new_value, new_size)
+      Word.new(@n >> (new_size * (last_index - i)), new_size)
     end
   end
 
@@ -128,8 +124,8 @@ class Word
   # Transforma la palabra en una palabra de otro tamaño.
   # @param size [Numeric] tamaño de la nueva palabra.
   # @return [Word] nueva palabra.
-  def to_word(size = @size)
-    Word(@n, size)
+  def to_word
+    self
   end
 
   # Compara la palabra con otra palabra.
@@ -152,10 +148,4 @@ class Word
   alias_method :⊻, :^
   alias_method :left_rotate, :⋘
   alias_method :right_rotate, :⋙
-end
-
-# Forma simplificada de crear una palabra.
-# @see Word#initialize
-def Word(param, size = nil)
-  Word.new(param, size)
 end

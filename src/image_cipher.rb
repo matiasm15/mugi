@@ -24,3 +24,7 @@ module ImageCipher
     File.open(out, 'w') { |f| f.write(image_url.pack('c*')) }
   end
 end
+
+unless ARGV.empty?
+  ImageCipher.process(ARGV[0], ARGV[1], ARGV[2], out: 'out.bmp' || ARGV[3])
+end

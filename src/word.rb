@@ -121,9 +121,8 @@ class Word
     to_i.to_s(16).rjust(@size.fdiv(4).ceil, '0')
   end
 
-  # Transforma la palabra en una palabra de otro tamaño.
-  # @param size [Numeric] tamaño de la nueva palabra.
-  # @return [Word] nueva palabra.
+  # Devuelve a si mismo.
+  # @return [Word] la palabra.
   def to_word
     self
   end
@@ -137,6 +136,7 @@ class Word
     @n <=> word.to_i
   end
 
+  # Inspecciona la palabra.
   def inspect
     to_s
   end

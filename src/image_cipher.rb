@@ -2,9 +2,15 @@
 
 require_relative 'mugi'
 
+# Cifrador de imagenes BMP.
 module ImageCipher
   module_function
 
+  # Cifra una imagen BMP.
+  # @param path [String] ruta de la imagen.
+  # @param key [String | Numeric | Word] clave de 128 bits.
+  # @param iv [String | Numeric | Word] vector de inicialización de 128 bits.
+  # @param out [String] el nombre del archivo de salida.
   def process(path, key, iv, out: 'out.bmp')
     image_url = nil
     body = nil

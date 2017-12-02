@@ -145,7 +145,7 @@ clave y un vector de inicialización, ambos de 128 bits.</p>
 
 </div>
       </dt>
-      <dd><pre class="code"><span class='const'><span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></span><span class='lparen'>(</span><span class='int'>0x6A09E667F3BCC908</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span></pre></dd>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Word.html#initialize-instance_method" title="Word#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='int'>0x6A09E667F3BCC908</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span></pre></dd>
     
       <dt id="C1-constant" class="">C1 =
         <div class="docstring">
@@ -161,7 +161,7 @@ clave y un vector de inicialización, ambos de 128 bits.</p>
 
 </div>
       </dt>
-      <dd><pre class="code"><span class='const'><span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></span><span class='lparen'>(</span><span class='int'>0xBB67AE8584CAA73B</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span></pre></dd>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Word.html#initialize-instance_method" title="Word#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='int'>0xBB67AE8584CAA73B</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span></pre></dd>
     
       <dt id="C2-constant" class="">C2 =
         <div class="docstring">
@@ -177,7 +177,121 @@ clave y un vector de inicialización, ambos de 128 bits.</p>
 
 </div>
       </dt>
-      <dd><pre class="code"><span class='const'><span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></span><span class='lparen'>(</span><span class='int'>0x3C6EF372FE94F82B</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span></pre></dd>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Word.html#initialize-instance_method" title="Word#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='int'>0x3C6EF372FE94F82B</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span></pre></dd>
+    
+      <dt id="S_BOX-constant" class="">S_BOX =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Tabla loockup de la S-Box.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span>
+  <span class='int'>0x63</span><span class='comma'>,</span> <span class='int'>0x7c</span><span class='comma'>,</span> <span class='int'>0x77</span><span class='comma'>,</span> <span class='int'>0x7b</span><span class='comma'>,</span> <span class='int'>0xf2</span><span class='comma'>,</span> <span class='int'>0x6b</span><span class='comma'>,</span> <span class='int'>0x6f</span><span class='comma'>,</span> <span class='int'>0xc5</span><span class='comma'>,</span>
+  <span class='int'>0x30</span><span class='comma'>,</span> <span class='int'>0x01</span><span class='comma'>,</span> <span class='int'>0x67</span><span class='comma'>,</span> <span class='int'>0x2b</span><span class='comma'>,</span> <span class='int'>0xfe</span><span class='comma'>,</span> <span class='int'>0xd7</span><span class='comma'>,</span> <span class='int'>0xab</span><span class='comma'>,</span> <span class='int'>0x76</span><span class='comma'>,</span>
+  <span class='int'>0xca</span><span class='comma'>,</span> <span class='int'>0x82</span><span class='comma'>,</span> <span class='int'>0xc9</span><span class='comma'>,</span> <span class='int'>0x7d</span><span class='comma'>,</span> <span class='int'>0xfa</span><span class='comma'>,</span> <span class='int'>0x59</span><span class='comma'>,</span> <span class='int'>0x47</span><span class='comma'>,</span> <span class='int'>0xf0</span><span class='comma'>,</span>
+  <span class='int'>0xad</span><span class='comma'>,</span> <span class='int'>0xd4</span><span class='comma'>,</span> <span class='int'>0xa2</span><span class='comma'>,</span> <span class='int'>0xaf</span><span class='comma'>,</span> <span class='int'>0x9c</span><span class='comma'>,</span> <span class='int'>0xa4</span><span class='comma'>,</span> <span class='int'>0x72</span><span class='comma'>,</span> <span class='int'>0xc0</span><span class='comma'>,</span>
+  <span class='int'>0xb7</span><span class='comma'>,</span> <span class='int'>0xfd</span><span class='comma'>,</span> <span class='int'>0x93</span><span class='comma'>,</span> <span class='int'>0x26</span><span class='comma'>,</span> <span class='int'>0x36</span><span class='comma'>,</span> <span class='int'>0x3f</span><span class='comma'>,</span> <span class='int'>0xf7</span><span class='comma'>,</span> <span class='int'>0xcc</span><span class='comma'>,</span>
+  <span class='int'>0x34</span><span class='comma'>,</span> <span class='int'>0xa5</span><span class='comma'>,</span> <span class='int'>0xe5</span><span class='comma'>,</span> <span class='int'>0xf1</span><span class='comma'>,</span> <span class='int'>0x71</span><span class='comma'>,</span> <span class='int'>0xd8</span><span class='comma'>,</span> <span class='int'>0x31</span><span class='comma'>,</span> <span class='int'>0x15</span><span class='comma'>,</span>
+  <span class='int'>0x04</span><span class='comma'>,</span> <span class='int'>0xc7</span><span class='comma'>,</span> <span class='int'>0x23</span><span class='comma'>,</span> <span class='int'>0xc3</span><span class='comma'>,</span> <span class='int'>0x18</span><span class='comma'>,</span> <span class='int'>0x96</span><span class='comma'>,</span> <span class='int'>0x05</span><span class='comma'>,</span> <span class='int'>0x9a</span><span class='comma'>,</span>
+  <span class='int'>0x07</span><span class='comma'>,</span> <span class='int'>0x12</span><span class='comma'>,</span> <span class='int'>0x80</span><span class='comma'>,</span> <span class='int'>0xe2</span><span class='comma'>,</span> <span class='int'>0xeb</span><span class='comma'>,</span> <span class='int'>0x27</span><span class='comma'>,</span> <span class='int'>0xb2</span><span class='comma'>,</span> <span class='int'>0x75</span><span class='comma'>,</span>
+  <span class='int'>0x09</span><span class='comma'>,</span> <span class='int'>0x83</span><span class='comma'>,</span> <span class='int'>0x2c</span><span class='comma'>,</span> <span class='int'>0x1a</span><span class='comma'>,</span> <span class='int'>0x1b</span><span class='comma'>,</span> <span class='int'>0x6e</span><span class='comma'>,</span> <span class='int'>0x5a</span><span class='comma'>,</span> <span class='int'>0xa0</span><span class='comma'>,</span>
+  <span class='int'>0x52</span><span class='comma'>,</span> <span class='int'>0x3b</span><span class='comma'>,</span> <span class='int'>0xd6</span><span class='comma'>,</span> <span class='int'>0xb3</span><span class='comma'>,</span> <span class='int'>0x29</span><span class='comma'>,</span> <span class='int'>0xe3</span><span class='comma'>,</span> <span class='int'>0x2f</span><span class='comma'>,</span> <span class='int'>0x84</span><span class='comma'>,</span>
+  <span class='int'>0x53</span><span class='comma'>,</span> <span class='int'>0xd1</span><span class='comma'>,</span> <span class='int'>0x00</span><span class='comma'>,</span> <span class='int'>0xed</span><span class='comma'>,</span> <span class='int'>0x20</span><span class='comma'>,</span> <span class='int'>0xfc</span><span class='comma'>,</span> <span class='int'>0xb1</span><span class='comma'>,</span> <span class='int'>0x5b</span><span class='comma'>,</span>
+  <span class='int'>0x6a</span><span class='comma'>,</span> <span class='int'>0xcb</span><span class='comma'>,</span> <span class='int'>0xbe</span><span class='comma'>,</span> <span class='int'>0x39</span><span class='comma'>,</span> <span class='int'>0x4a</span><span class='comma'>,</span> <span class='int'>0x4c</span><span class='comma'>,</span> <span class='int'>0x58</span><span class='comma'>,</span> <span class='int'>0xcf</span><span class='comma'>,</span>
+  <span class='int'>0xd0</span><span class='comma'>,</span> <span class='int'>0xef</span><span class='comma'>,</span> <span class='int'>0xaa</span><span class='comma'>,</span> <span class='int'>0xfb</span><span class='comma'>,</span> <span class='int'>0x43</span><span class='comma'>,</span> <span class='int'>0x4d</span><span class='comma'>,</span> <span class='int'>0x33</span><span class='comma'>,</span> <span class='int'>0x85</span><span class='comma'>,</span>
+  <span class='int'>0x45</span><span class='comma'>,</span> <span class='int'>0xf9</span><span class='comma'>,</span> <span class='int'>0x02</span><span class='comma'>,</span> <span class='int'>0x7f</span><span class='comma'>,</span> <span class='int'>0x50</span><span class='comma'>,</span> <span class='int'>0x3c</span><span class='comma'>,</span> <span class='int'>0x9f</span><span class='comma'>,</span> <span class='int'>0xa8</span><span class='comma'>,</span>
+  <span class='int'>0x51</span><span class='comma'>,</span> <span class='int'>0xa3</span><span class='comma'>,</span> <span class='int'>0x40</span><span class='comma'>,</span> <span class='int'>0x8f</span><span class='comma'>,</span> <span class='int'>0x92</span><span class='comma'>,</span> <span class='int'>0x9d</span><span class='comma'>,</span> <span class='int'>0x38</span><span class='comma'>,</span> <span class='int'>0xf5</span><span class='comma'>,</span>
+  <span class='int'>0xbc</span><span class='comma'>,</span> <span class='int'>0xb6</span><span class='comma'>,</span> <span class='int'>0xda</span><span class='comma'>,</span> <span class='int'>0x21</span><span class='comma'>,</span> <span class='int'>0x10</span><span class='comma'>,</span> <span class='int'>0xff</span><span class='comma'>,</span> <span class='int'>0xf3</span><span class='comma'>,</span> <span class='int'>0xd2</span><span class='comma'>,</span>
+  <span class='int'>0xcd</span><span class='comma'>,</span> <span class='int'>0x0c</span><span class='comma'>,</span> <span class='int'>0x13</span><span class='comma'>,</span> <span class='int'>0xec</span><span class='comma'>,</span> <span class='int'>0x5f</span><span class='comma'>,</span> <span class='int'>0x97</span><span class='comma'>,</span> <span class='int'>0x44</span><span class='comma'>,</span> <span class='int'>0x17</span><span class='comma'>,</span>
+  <span class='int'>0xc4</span><span class='comma'>,</span> <span class='int'>0xa7</span><span class='comma'>,</span> <span class='int'>0x7e</span><span class='comma'>,</span> <span class='int'>0x3d</span><span class='comma'>,</span> <span class='int'>0x64</span><span class='comma'>,</span> <span class='int'>0x5d</span><span class='comma'>,</span> <span class='int'>0x19</span><span class='comma'>,</span> <span class='int'>0x73</span><span class='comma'>,</span>
+  <span class='int'>0x60</span><span class='comma'>,</span> <span class='int'>0x81</span><span class='comma'>,</span> <span class='int'>0x4f</span><span class='comma'>,</span> <span class='int'>0xdc</span><span class='comma'>,</span> <span class='int'>0x22</span><span class='comma'>,</span> <span class='int'>0x2a</span><span class='comma'>,</span> <span class='int'>0x90</span><span class='comma'>,</span> <span class='int'>0x88</span><span class='comma'>,</span>
+  <span class='int'>0x46</span><span class='comma'>,</span> <span class='int'>0xee</span><span class='comma'>,</span> <span class='int'>0xb8</span><span class='comma'>,</span> <span class='int'>0x14</span><span class='comma'>,</span> <span class='int'>0xde</span><span class='comma'>,</span> <span class='int'>0x5e</span><span class='comma'>,</span> <span class='int'>0x0b</span><span class='comma'>,</span> <span class='int'>0xdb</span><span class='comma'>,</span>
+  <span class='int'>0xe0</span><span class='comma'>,</span> <span class='int'>0x32</span><span class='comma'>,</span> <span class='int'>0x3a</span><span class='comma'>,</span> <span class='int'>0x0a</span><span class='comma'>,</span> <span class='int'>0x49</span><span class='comma'>,</span> <span class='int'>0x06</span><span class='comma'>,</span> <span class='int'>0x24</span><span class='comma'>,</span> <span class='int'>0x5c</span><span class='comma'>,</span>
+  <span class='int'>0xc2</span><span class='comma'>,</span> <span class='int'>0xd3</span><span class='comma'>,</span> <span class='int'>0xac</span><span class='comma'>,</span> <span class='int'>0x62</span><span class='comma'>,</span> <span class='int'>0x91</span><span class='comma'>,</span> <span class='int'>0x95</span><span class='comma'>,</span> <span class='int'>0xe4</span><span class='comma'>,</span> <span class='int'>0x79</span><span class='comma'>,</span>
+  <span class='int'>0xe7</span><span class='comma'>,</span> <span class='int'>0xc8</span><span class='comma'>,</span> <span class='int'>0x37</span><span class='comma'>,</span> <span class='int'>0x6d</span><span class='comma'>,</span> <span class='int'>0x8d</span><span class='comma'>,</span> <span class='int'>0xd5</span><span class='comma'>,</span> <span class='int'>0x4e</span><span class='comma'>,</span> <span class='int'>0xa9</span><span class='comma'>,</span>
+  <span class='int'>0x6c</span><span class='comma'>,</span> <span class='int'>0x56</span><span class='comma'>,</span> <span class='int'>0xf4</span><span class='comma'>,</span> <span class='int'>0xea</span><span class='comma'>,</span> <span class='int'>0x65</span><span class='comma'>,</span> <span class='int'>0x7a</span><span class='comma'>,</span> <span class='int'>0xae</span><span class='comma'>,</span> <span class='int'>0x08</span><span class='comma'>,</span>
+  <span class='int'>0xba</span><span class='comma'>,</span> <span class='int'>0x78</span><span class='comma'>,</span> <span class='int'>0x25</span><span class='comma'>,</span> <span class='int'>0x2e</span><span class='comma'>,</span> <span class='int'>0x1c</span><span class='comma'>,</span> <span class='int'>0xa6</span><span class='comma'>,</span> <span class='int'>0xb4</span><span class='comma'>,</span> <span class='int'>0xc6</span><span class='comma'>,</span>
+  <span class='int'>0xe8</span><span class='comma'>,</span> <span class='int'>0xdd</span><span class='comma'>,</span> <span class='int'>0x74</span><span class='comma'>,</span> <span class='int'>0x1f</span><span class='comma'>,</span> <span class='int'>0x4b</span><span class='comma'>,</span> <span class='int'>0xbd</span><span class='comma'>,</span> <span class='int'>0x8b</span><span class='comma'>,</span> <span class='int'>0x8a</span><span class='comma'>,</span>
+  <span class='int'>0x70</span><span class='comma'>,</span> <span class='int'>0x3e</span><span class='comma'>,</span> <span class='int'>0xb5</span><span class='comma'>,</span> <span class='int'>0x66</span><span class='comma'>,</span> <span class='int'>0x48</span><span class='comma'>,</span> <span class='int'>0x03</span><span class='comma'>,</span> <span class='int'>0xf6</span><span class='comma'>,</span> <span class='int'>0x0e</span><span class='comma'>,</span>
+  <span class='int'>0x61</span><span class='comma'>,</span> <span class='int'>0x35</span><span class='comma'>,</span> <span class='int'>0x57</span><span class='comma'>,</span> <span class='int'>0xb9</span><span class='comma'>,</span> <span class='int'>0x86</span><span class='comma'>,</span> <span class='int'>0xc1</span><span class='comma'>,</span> <span class='int'>0x1d</span><span class='comma'>,</span> <span class='int'>0x9e</span><span class='comma'>,</span>
+  <span class='int'>0xe1</span><span class='comma'>,</span> <span class='int'>0xf8</span><span class='comma'>,</span> <span class='int'>0x98</span><span class='comma'>,</span> <span class='int'>0x11</span><span class='comma'>,</span> <span class='int'>0x69</span><span class='comma'>,</span> <span class='int'>0xd9</span><span class='comma'>,</span> <span class='int'>0x8e</span><span class='comma'>,</span> <span class='int'>0x94</span><span class='comma'>,</span>
+  <span class='int'>0x9b</span><span class='comma'>,</span> <span class='int'>0x1e</span><span class='comma'>,</span> <span class='int'>0x87</span><span class='comma'>,</span> <span class='int'>0xe9</span><span class='comma'>,</span> <span class='int'>0xce</span><span class='comma'>,</span> <span class='int'>0x55</span><span class='comma'>,</span> <span class='int'>0x28</span><span class='comma'>,</span> <span class='int'>0xdf</span><span class='comma'>,</span>
+  <span class='int'>0x8c</span><span class='comma'>,</span> <span class='int'>0xa1</span><span class='comma'>,</span> <span class='int'>0x89</span><span class='comma'>,</span> <span class='int'>0x0d</span><span class='comma'>,</span> <span class='int'>0xbf</span><span class='comma'>,</span> <span class='int'>0xe6</span><span class='comma'>,</span> <span class='int'>0x42</span><span class='comma'>,</span> <span class='int'>0x68</span><span class='comma'>,</span>
+  <span class='int'>0x41</span><span class='comma'>,</span> <span class='int'>0x99</span><span class='comma'>,</span> <span class='int'>0x2d</span><span class='comma'>,</span> <span class='int'>0x0f</span><span class='comma'>,</span> <span class='int'>0xb0</span><span class='comma'>,</span> <span class='int'>0x54</span><span class='comma'>,</span> <span class='int'>0xbb</span><span class='comma'>,</span> <span class='int'>0x16</span>
+<span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_word</span><span class='rparen'>)</span></pre></dd>
+    
+      <dt id="X02X-constant" class="">X02X =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Tabla loockup para calcular la multiplicación en GF.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='lbracket'>[</span>
+  <span class='int'>0x00</span><span class='comma'>,</span> <span class='int'>0x02</span><span class='comma'>,</span> <span class='int'>0x04</span><span class='comma'>,</span> <span class='int'>0x06</span><span class='comma'>,</span> <span class='int'>0x08</span><span class='comma'>,</span> <span class='int'>0x0a</span><span class='comma'>,</span> <span class='int'>0x0c</span><span class='comma'>,</span> <span class='int'>0x0e</span><span class='comma'>,</span>
+  <span class='int'>0x10</span><span class='comma'>,</span> <span class='int'>0x12</span><span class='comma'>,</span> <span class='int'>0x14</span><span class='comma'>,</span> <span class='int'>0x16</span><span class='comma'>,</span> <span class='int'>0x18</span><span class='comma'>,</span> <span class='int'>0x1a</span><span class='comma'>,</span> <span class='int'>0x1c</span><span class='comma'>,</span> <span class='int'>0x1e</span><span class='comma'>,</span>
+  <span class='int'>0x20</span><span class='comma'>,</span> <span class='int'>0x22</span><span class='comma'>,</span> <span class='int'>0x24</span><span class='comma'>,</span> <span class='int'>0x26</span><span class='comma'>,</span> <span class='int'>0x28</span><span class='comma'>,</span> <span class='int'>0x2a</span><span class='comma'>,</span> <span class='int'>0x2c</span><span class='comma'>,</span> <span class='int'>0x2e</span><span class='comma'>,</span>
+  <span class='int'>0x30</span><span class='comma'>,</span> <span class='int'>0x32</span><span class='comma'>,</span> <span class='int'>0x34</span><span class='comma'>,</span> <span class='int'>0x36</span><span class='comma'>,</span> <span class='int'>0x38</span><span class='comma'>,</span> <span class='int'>0x3a</span><span class='comma'>,</span> <span class='int'>0x3c</span><span class='comma'>,</span> <span class='int'>0x3e</span><span class='comma'>,</span>
+  <span class='int'>0x40</span><span class='comma'>,</span> <span class='int'>0x42</span><span class='comma'>,</span> <span class='int'>0x44</span><span class='comma'>,</span> <span class='int'>0x46</span><span class='comma'>,</span> <span class='int'>0x48</span><span class='comma'>,</span> <span class='int'>0x4a</span><span class='comma'>,</span> <span class='int'>0x4c</span><span class='comma'>,</span> <span class='int'>0x4e</span><span class='comma'>,</span>
+  <span class='int'>0x50</span><span class='comma'>,</span> <span class='int'>0x52</span><span class='comma'>,</span> <span class='int'>0x54</span><span class='comma'>,</span> <span class='int'>0x56</span><span class='comma'>,</span> <span class='int'>0x58</span><span class='comma'>,</span> <span class='int'>0x5a</span><span class='comma'>,</span> <span class='int'>0x5c</span><span class='comma'>,</span> <span class='int'>0x5e</span><span class='comma'>,</span>
+  <span class='int'>0x60</span><span class='comma'>,</span> <span class='int'>0x62</span><span class='comma'>,</span> <span class='int'>0x64</span><span class='comma'>,</span> <span class='int'>0x66</span><span class='comma'>,</span> <span class='int'>0x68</span><span class='comma'>,</span> <span class='int'>0x6a</span><span class='comma'>,</span> <span class='int'>0x6c</span><span class='comma'>,</span> <span class='int'>0x6e</span><span class='comma'>,</span>
+  <span class='int'>0x70</span><span class='comma'>,</span> <span class='int'>0x72</span><span class='comma'>,</span> <span class='int'>0x74</span><span class='comma'>,</span> <span class='int'>0x76</span><span class='comma'>,</span> <span class='int'>0x78</span><span class='comma'>,</span> <span class='int'>0x7a</span><span class='comma'>,</span> <span class='int'>0x7c</span><span class='comma'>,</span> <span class='int'>0x7e</span><span class='comma'>,</span>
+  <span class='int'>0x80</span><span class='comma'>,</span> <span class='int'>0x82</span><span class='comma'>,</span> <span class='int'>0x84</span><span class='comma'>,</span> <span class='int'>0x86</span><span class='comma'>,</span> <span class='int'>0x88</span><span class='comma'>,</span> <span class='int'>0x8a</span><span class='comma'>,</span> <span class='int'>0x8c</span><span class='comma'>,</span> <span class='int'>0x8e</span><span class='comma'>,</span>
+  <span class='int'>0x90</span><span class='comma'>,</span> <span class='int'>0x92</span><span class='comma'>,</span> <span class='int'>0x94</span><span class='comma'>,</span> <span class='int'>0x96</span><span class='comma'>,</span> <span class='int'>0x98</span><span class='comma'>,</span> <span class='int'>0x9a</span><span class='comma'>,</span> <span class='int'>0x9c</span><span class='comma'>,</span> <span class='int'>0x9e</span><span class='comma'>,</span>
+  <span class='int'>0xa0</span><span class='comma'>,</span> <span class='int'>0xa2</span><span class='comma'>,</span> <span class='int'>0xa4</span><span class='comma'>,</span> <span class='int'>0xa6</span><span class='comma'>,</span> <span class='int'>0xa8</span><span class='comma'>,</span> <span class='int'>0xaa</span><span class='comma'>,</span> <span class='int'>0xac</span><span class='comma'>,</span> <span class='int'>0xae</span><span class='comma'>,</span>
+  <span class='int'>0xb0</span><span class='comma'>,</span> <span class='int'>0xb2</span><span class='comma'>,</span> <span class='int'>0xb4</span><span class='comma'>,</span> <span class='int'>0xb6</span><span class='comma'>,</span> <span class='int'>0xb8</span><span class='comma'>,</span> <span class='int'>0xba</span><span class='comma'>,</span> <span class='int'>0xbc</span><span class='comma'>,</span> <span class='int'>0xbe</span><span class='comma'>,</span>
+  <span class='int'>0xc0</span><span class='comma'>,</span> <span class='int'>0xc2</span><span class='comma'>,</span> <span class='int'>0xc4</span><span class='comma'>,</span> <span class='int'>0xc6</span><span class='comma'>,</span> <span class='int'>0xc8</span><span class='comma'>,</span> <span class='int'>0xca</span><span class='comma'>,</span> <span class='int'>0xcc</span><span class='comma'>,</span> <span class='int'>0xce</span><span class='comma'>,</span>
+  <span class='int'>0xd0</span><span class='comma'>,</span> <span class='int'>0xd2</span><span class='comma'>,</span> <span class='int'>0xd4</span><span class='comma'>,</span> <span class='int'>0xd6</span><span class='comma'>,</span> <span class='int'>0xd8</span><span class='comma'>,</span> <span class='int'>0xda</span><span class='comma'>,</span> <span class='int'>0xdc</span><span class='comma'>,</span> <span class='int'>0xde</span><span class='comma'>,</span>
+  <span class='int'>0xe0</span><span class='comma'>,</span> <span class='int'>0xe2</span><span class='comma'>,</span> <span class='int'>0xe4</span><span class='comma'>,</span> <span class='int'>0xe6</span><span class='comma'>,</span> <span class='int'>0xe8</span><span class='comma'>,</span> <span class='int'>0xea</span><span class='comma'>,</span> <span class='int'>0xec</span><span class='comma'>,</span> <span class='int'>0xee</span><span class='comma'>,</span>
+  <span class='int'>0xf0</span><span class='comma'>,</span> <span class='int'>0xf2</span><span class='comma'>,</span> <span class='int'>0xf4</span><span class='comma'>,</span> <span class='int'>0xf6</span><span class='comma'>,</span> <span class='int'>0xf8</span><span class='comma'>,</span> <span class='int'>0xfa</span><span class='comma'>,</span> <span class='int'>0xfc</span><span class='comma'>,</span> <span class='int'>0xfe</span><span class='comma'>,</span>
+  <span class='int'>0x1b</span><span class='comma'>,</span> <span class='int'>0x19</span><span class='comma'>,</span> <span class='int'>0x1f</span><span class='comma'>,</span> <span class='int'>0x1d</span><span class='comma'>,</span> <span class='int'>0x13</span><span class='comma'>,</span> <span class='int'>0x11</span><span class='comma'>,</span> <span class='int'>0x17</span><span class='comma'>,</span> <span class='int'>0x15</span><span class='comma'>,</span>
+  <span class='int'>0x0b</span><span class='comma'>,</span> <span class='int'>0x09</span><span class='comma'>,</span> <span class='int'>0x0f</span><span class='comma'>,</span> <span class='int'>0x0d</span><span class='comma'>,</span> <span class='int'>0x03</span><span class='comma'>,</span> <span class='int'>0x01</span><span class='comma'>,</span> <span class='int'>0x07</span><span class='comma'>,</span> <span class='int'>0x05</span><span class='comma'>,</span>
+  <span class='int'>0x3b</span><span class='comma'>,</span> <span class='int'>0x39</span><span class='comma'>,</span> <span class='int'>0x3f</span><span class='comma'>,</span> <span class='int'>0x3d</span><span class='comma'>,</span> <span class='int'>0x33</span><span class='comma'>,</span> <span class='int'>0x31</span><span class='comma'>,</span> <span class='int'>0x37</span><span class='comma'>,</span> <span class='int'>0x35</span><span class='comma'>,</span>
+  <span class='int'>0x2b</span><span class='comma'>,</span> <span class='int'>0x29</span><span class='comma'>,</span> <span class='int'>0x2f</span><span class='comma'>,</span> <span class='int'>0x2d</span><span class='comma'>,</span> <span class='int'>0x23</span><span class='comma'>,</span> <span class='int'>0x21</span><span class='comma'>,</span> <span class='int'>0x27</span><span class='comma'>,</span> <span class='int'>0x25</span><span class='comma'>,</span>
+  <span class='int'>0x5b</span><span class='comma'>,</span> <span class='int'>0x59</span><span class='comma'>,</span> <span class='int'>0x5f</span><span class='comma'>,</span> <span class='int'>0x5d</span><span class='comma'>,</span> <span class='int'>0x53</span><span class='comma'>,</span> <span class='int'>0x51</span><span class='comma'>,</span> <span class='int'>0x57</span><span class='comma'>,</span> <span class='int'>0x55</span><span class='comma'>,</span>
+  <span class='int'>0x4b</span><span class='comma'>,</span> <span class='int'>0x49</span><span class='comma'>,</span> <span class='int'>0x4f</span><span class='comma'>,</span> <span class='int'>0x4d</span><span class='comma'>,</span> <span class='int'>0x43</span><span class='comma'>,</span> <span class='int'>0x41</span><span class='comma'>,</span> <span class='int'>0x47</span><span class='comma'>,</span> <span class='int'>0x45</span><span class='comma'>,</span>
+  <span class='int'>0x7b</span><span class='comma'>,</span> <span class='int'>0x79</span><span class='comma'>,</span> <span class='int'>0x7f</span><span class='comma'>,</span> <span class='int'>0x7d</span><span class='comma'>,</span> <span class='int'>0x73</span><span class='comma'>,</span> <span class='int'>0x71</span><span class='comma'>,</span> <span class='int'>0x77</span><span class='comma'>,</span> <span class='int'>0x75</span><span class='comma'>,</span>
+  <span class='int'>0x6b</span><span class='comma'>,</span> <span class='int'>0x69</span><span class='comma'>,</span> <span class='int'>0x6f</span><span class='comma'>,</span> <span class='int'>0x6d</span><span class='comma'>,</span> <span class='int'>0x63</span><span class='comma'>,</span> <span class='int'>0x61</span><span class='comma'>,</span> <span class='int'>0x67</span><span class='comma'>,</span> <span class='int'>0x65</span><span class='comma'>,</span>
+  <span class='int'>0x9b</span><span class='comma'>,</span> <span class='int'>0x99</span><span class='comma'>,</span> <span class='int'>0x9f</span><span class='comma'>,</span> <span class='int'>0x9d</span><span class='comma'>,</span> <span class='int'>0x93</span><span class='comma'>,</span> <span class='int'>0x91</span><span class='comma'>,</span> <span class='int'>0x97</span><span class='comma'>,</span> <span class='int'>0x95</span><span class='comma'>,</span>
+  <span class='int'>0x8b</span><span class='comma'>,</span> <span class='int'>0x89</span><span class='comma'>,</span> <span class='int'>0x8f</span><span class='comma'>,</span> <span class='int'>0x8d</span><span class='comma'>,</span> <span class='int'>0x83</span><span class='comma'>,</span> <span class='int'>0x81</span><span class='comma'>,</span> <span class='int'>0x87</span><span class='comma'>,</span> <span class='int'>0x85</span><span class='comma'>,</span>
+  <span class='int'>0xbb</span><span class='comma'>,</span> <span class='int'>0xb9</span><span class='comma'>,</span> <span class='int'>0xbf</span><span class='comma'>,</span> <span class='int'>0xbd</span><span class='comma'>,</span> <span class='int'>0xb3</span><span class='comma'>,</span> <span class='int'>0xb1</span><span class='comma'>,</span> <span class='int'>0xb7</span><span class='comma'>,</span> <span class='int'>0xb5</span><span class='comma'>,</span>
+  <span class='int'>0xab</span><span class='comma'>,</span> <span class='int'>0xa9</span><span class='comma'>,</span> <span class='int'>0xaf</span><span class='comma'>,</span> <span class='int'>0xad</span><span class='comma'>,</span> <span class='int'>0xa3</span><span class='comma'>,</span> <span class='int'>0xa1</span><span class='comma'>,</span> <span class='int'>0xa7</span><span class='comma'>,</span> <span class='int'>0xa5</span><span class='comma'>,</span>
+  <span class='int'>0xdb</span><span class='comma'>,</span> <span class='int'>0xd9</span><span class='comma'>,</span> <span class='int'>0xdf</span><span class='comma'>,</span> <span class='int'>0xdd</span><span class='comma'>,</span> <span class='int'>0xd3</span><span class='comma'>,</span> <span class='int'>0xd1</span><span class='comma'>,</span> <span class='int'>0xd7</span><span class='comma'>,</span> <span class='int'>0xd5</span><span class='comma'>,</span>
+  <span class='int'>0xcb</span><span class='comma'>,</span> <span class='int'>0xc9</span><span class='comma'>,</span> <span class='int'>0xcf</span><span class='comma'>,</span> <span class='int'>0xcd</span><span class='comma'>,</span> <span class='int'>0xc3</span><span class='comma'>,</span> <span class='int'>0xc1</span><span class='comma'>,</span> <span class='int'>0xc7</span><span class='comma'>,</span> <span class='int'>0xc5</span><span class='comma'>,</span>
+  <span class='int'>0xfb</span><span class='comma'>,</span> <span class='int'>0xf9</span><span class='comma'>,</span> <span class='int'>0xff</span><span class='comma'>,</span> <span class='int'>0xfd</span><span class='comma'>,</span> <span class='int'>0xf3</span><span class='comma'>,</span> <span class='int'>0xf1</span><span class='comma'>,</span> <span class='int'>0xf7</span><span class='comma'>,</span> <span class='int'>0xf5</span><span class='comma'>,</span>
+  <span class='int'>0xeb</span><span class='comma'>,</span> <span class='int'>0xe9</span><span class='comma'>,</span> <span class='int'>0xef</span><span class='comma'>,</span> <span class='int'>0xed</span><span class='comma'>,</span> <span class='int'>0xe3</span><span class='comma'>,</span> <span class='int'>0xe1</span><span class='comma'>,</span> <span class='int'>0xe7</span><span class='comma'>,</span> <span class='int'>0xe5</span>
+<span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:to_word</span><span class='rparen'>)</span></pre></dd>
+    
+      <dt id="WORD_NULL-constant" class="">WORD_NULL =
+        <div class="docstring">
+  <div class="discussion">
+    
+<p>Palabra que representa al cero.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+      </dt>
+      <dd><pre class="code"><span class='const'><span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Word.html#initialize-instance_method" title="Word#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span><span class='rparen'>)</span></pre></dd>
     
   </dl>
 
@@ -301,7 +415,7 @@ clave y un vector de inicialización, ambos de 128 bits.</p>
         <span class='name'>key</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span> | <span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></tt>)</span>
+        <span class='type'>(<tt>String | <span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span> | <span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></tt>)</span>
       
       
       
@@ -317,7 +431,7 @@ clave y un vector de inicialización, ambos de 128 bits.</p>
         <span class='name'>iv</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span> | <span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></tt>)</span>
+        <span class='type'>(<tt>String | <span class='object_link'><a href="Numeric.html" title="Numeric (class)">Numeric</a></span> | <span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></tt>)</span>
       
       
       
@@ -337,21 +451,27 @@ clave y un vector de inicialización, ambos de 128 bits.</p>
       <pre class="lines">
 
 
-24
-25
-26
-27
-28
-29
-30
-31</pre>
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/mugi.rb', line 24</span>
+      <pre class="code"><span class="info file"># File 'src/mugi.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_iv'>iv</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_to_word'>to_word</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_iv'>iv</span> <span class='op'>=</span> <span class='id identifier rubyid_iv'>iv</span><span class='period'>.</span><span class='id identifier rubyid_to_word'>to_word</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_bytes'>bytes</span> <span class='kw'>if</span> <span class='id identifier rubyid_key'>key</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_key'>key</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Word.html#initialize-instance_method" title="Word#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span>
+
+  <span class='id identifier rubyid_iv'>iv</span> <span class='op'>=</span> <span class='id identifier rubyid_iv'>iv</span><span class='period'>.</span><span class='id identifier rubyid_bytes'>bytes</span> <span class='kw'>if</span> <span class='id identifier rubyid_iv'>iv</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>String</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_iv'>iv</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Word.html" title="Word (class)">Word</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Word.html#initialize-instance_method" title="Word#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_iv'>iv</span><span class='comma'>,</span> <span class='const'><span class='object_link'><a href="#UNIT_SIZE-constant" title="MUGI::UNIT_SIZE (constant)">UNIT_SIZE</a></span></span> <span class='op'>*</span> <span class='int'>2</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_first_step'>first_step</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_second_step'>second_step</span><span class='lparen'>(</span><span class='id identifier rubyid_key'>key</span><span class='comma'>,</span> <span class='id identifier rubyid_iv'>iv</span><span class='rparen'>)</span>
@@ -433,12 +553,12 @@ clave y un vector de inicialización, ambos de 128 bits.</p>
       <pre class="lines">
 
 
-43
-44
-45</pre>
+121
+122
+123</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/mugi.rb', line 43</span>
+      <pre class="code"><span class="info file"># File 'src/mugi.rb', line 121</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span>
   <span class='lparen'>(</span><span class='int'>0</span><span class='op'>...</span><span class='id identifier rubyid_size'>size</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_next'>next</span> <span class='rbrace'>}</span>
@@ -492,13 +612,13 @@ clave y un vector de inicialización, ambos de 128 bits.</p>
       <pre class="lines">
 
 
-35
-36
-37
-38</pre>
+113
+114
+115
+116</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'src/mugi.rb', line 35</span>
+      <pre class="code"><span class="info file"># File 'src/mugi.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='kw'>next</span>
   <span class='id identifier rubyid_update'>update</span>
@@ -514,7 +634,7 @@ clave y un vector de inicialización, ambos de 128 bits.</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Oct 29 14:39:10 2017 by
+  Generated on Sat Dec  2 16:19:44 2017 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.9 (ruby-2.4.1).
 </div>

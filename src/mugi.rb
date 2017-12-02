@@ -18,6 +18,7 @@ class MUGI
   # Raíz cuadrada de 5 multiplicado por 2 a la 64.
   C2 = Word.new(0x3C6EF372FE94F82B, UNIT_SIZE * 2)
 
+  # Tabla loockup de la S-Box.
   S_BOX = [
     0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5,
     0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
@@ -53,6 +54,7 @@ class MUGI
     0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16
   ].map(&:to_word)
 
+  # Tabla loockup para calcular la multiplicación en GF.
   X02X = [
     0x00, 0x02, 0x04, 0x06, 0x08, 0x0a, 0x0c, 0x0e,
     0x10, 0x12, 0x14, 0x16, 0x18, 0x1a, 0x1c, 0x1e,
@@ -92,8 +94,8 @@ class MUGI
   WORD_NULL = Word.new(0, UNIT_SIZE)
 
   # Inicializa el algoritmo.
-  # @param key [Numeric | Word] clave de 128 bits.
-  # @param iv [Numeric | Word] vector de inicialización de 128 bits.
+  # @param key [String | Numeric | Word] clave de 128 bits.
+  # @param iv [String | Numeric | Word] vector de inicialización de 128 bits.
   def initialize(key, iv)
     key = key.bytes if key.is_a?(String)
     key = Word.new(key, UNIT_SIZE * 2)
